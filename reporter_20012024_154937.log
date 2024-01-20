@@ -1,0 +1,180 @@
+2024-01-20 15:49:37,834 DEBUG ReporterConfiguration __init__: User provided arguments: {'outputfile': None, 'template': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/robocontemplate.html.j2', 'xml': False, 'html': True, 'json': False, 'debug': True, 'custom_data': [['app_name:RoboCon App'], ['tester:Jenkins Automation NPA'], ['scope:Description of the scope of the application release 1.0'], ['release:1.0']], 'kw_name': None}
+2024-01-20 15:49:37,852 DEBUG RobotReporter start_suite: Start suite: Robocon & Other Feature
+2024-01-20 15:49:37,852 DEBUG RobotReporter start_suite: Start suite: {'id': 's1', 'longname': 'Robocon & Other Feature', 'doc': '', 'metadata': {}, 'starttime': '20240120 15:49:37.842', 'tests': [], 'suites': ['Robocon', 'Other Feature'], 'totaltests': 3, 'source': ''}
+2024-01-20 15:49:38,369 DEBUG RobotReporter start_suite: Start suite: Robocon
+2024-01-20 15:49:38,369 DEBUG RobotReporter start_suite: Start suite: {'id': 's1-s1', 'longname': 'Robocon & Other Feature.Robocon', 'doc': 'This is an example test suite of Homepage Feature of Demo App', 'metadata': {}, 'starttime': '20240120 15:49:37.853', 'tests': ['User Can See Home Page Screen Navigation Menu', 'Verify That Home Page Contains Custom Element'], 'suites': [], 'totaltests': 2, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot'}
+2024-01-20 15:49:38,370 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Set Selenium Timeout
+2024-01-20 15:49:38,370 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Sets the timeout that is used by various keywords.', 'assign': [], 'tags': [], 'lineno': 16, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:38.370', 'endtime': '20240120 15:49:38.370', 'elapsedtime': 0, 'kwname': 'Set Selenium Timeout', 'libname': 'SeleniumLibrary', 'args': ['30 seconds']}
+2024-01-20 15:49:38,370 DEBUG RobotReporter end_keyword: End keyword: Init Test Settings
+2024-01-20 15:49:38,370 DEBUG RobotReporter end_keyword: End keyword: {'doc': '', 'assign': [], 'tags': [], 'lineno': None, 'source': None, 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:38.370', 'endtime': '20240120 15:49:38.370', 'elapsedtime': 0, 'kwname': 'Init Test Settings', 'libname': '', 'args': []}
+2024-01-20 15:49:46,473 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Open Browser
+2024-01-20 15:49:46,473 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Opens a new browser instance to the optional ``url``.', 'assign': [], 'tags': [], 'lineno': None, 'source': None, 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:38.370', 'endtime': '20240120 15:49:46.473', 'elapsedtime': 8103, 'kwname': 'Open Browser', 'libname': 'SeleniumLibrary', 'args': ['${URL}', 'Chrome']}
+2024-01-20 15:49:46,473 DEBUG RobotReporter end_keyword: End keyword: BuiltIn.Run Keywords
+2024-01-20 15:49:46,473 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Executes all the given keywords in a sequence.', 'assign': [], 'tags': [], 'lineno': 8, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'type': 'SETUP', 'status': 'PASS', 'starttime': '20240120 15:49:38.370', 'endtime': '20240120 15:49:46.474', 'elapsedtime': 8104, 'kwname': 'Run Keywords', 'libname': 'BuiltIn', 'args': ['Init Test Settings', 'AND', 'Open Browser', '${URL}', 'Chrome']}
+2024-01-20 15:49:46,593 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Wait Until Page Contains Element
+2024-01-20 15:49:46,593 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Waits until the element ``locator`` appears on the current page.', 'assign': [], 'tags': [], 'lineno': 22, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:46.474', 'endtime': '20240120 15:49:46.593', 'elapsedtime': 119, 'kwname': 'Wait Until Page Contains Element', 'libname': 'SeleniumLibrary', 'args': ['//div[@class="content"]', '5s']}
+2024-01-20 15:49:46,593 DEBUG RobotReporter end_keyword: End keyword: Verify That Page Contains Subheading
+2024-01-20 15:49:46,593 DEBUG RobotReporter end_keyword: End keyword: {'doc': '', 'assign': [], 'tags': [], 'lineno': 27, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:46.474', 'endtime': '20240120 15:49:46.594', 'elapsedtime': 120, 'kwname': 'Verify That Page Contains Subheading', 'libname': '', 'args': []}
+2024-01-20 15:49:46,594 DEBUG RobotReporter end_test: End test: User Can See Home Page Screen Navigation Menu
+2024-01-20 15:49:46,594 DEBUG RobotReporter end_test: End test: {'id': 's1-s1-t1', 'longname': 'Robocon & Other Feature.Robocon.User Can See Home Page Screen Navigation Menu', 'doc': 'Open Testing Page and verify that it contains all mandatory elements', 'tags': ['BID-REQ-001', 'BID-REQ-003', 'BID-REQ-005'], 'lineno': 25, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'starttime': '20240120 15:49:46.474', 'endtime': '20240120 15:49:46.594', 'elapsedtime': 120, 'status': 'PASS', 'message': '', 'template': '', 'originalname': 'User Can See Home Page Screen Navigation Menu'}
+2024-01-20 15:49:47,025 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Page Should Contain Element
+2024-01-20 15:49:47,025 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Verifies that element ``locator`` is found on the current page.', 'assign': [], 'tags': [], 'lineno': 19, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'type': 'KEYWORD', 'status': 'FAIL', 'starttime': '20240120 15:49:46.595', 'endtime': '20240120 15:49:47.025', 'elapsedtime': 430, 'kwname': 'Page Should Contain Element', 'libname': 'SeleniumLibrary', 'args': ['//div[@class="i-am-not-there"]', '1s']}
+2024-01-20 15:49:47,025 DEBUG RobotReporter end_keyword: End keyword: Verify That Custom Element Is Located On The Page
+2024-01-20 15:49:47,025 DEBUG RobotReporter end_keyword: End keyword: {'doc': '', 'assign': [], 'tags': [], 'lineno': 31, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'type': 'KEYWORD', 'status': 'FAIL', 'starttime': '20240120 15:49:46.595', 'endtime': '20240120 15:49:47.025', 'elapsedtime': 430, 'kwname': 'Verify That Custom Element Is Located On The Page', 'libname': '', 'args': []}
+2024-01-20 15:49:47,025 DEBUG RobotReporter end_test: End test: Verify That Home Page Contains Custom Element
+2024-01-20 15:49:47,025 DEBUG RobotReporter end_test: End test: {'id': 's1-s1-t2', 'longname': 'Robocon & Other Feature.Robocon.Verify That Home Page Contains Custom Element', 'doc': 'Failing test case to demonstrate how it will look like in the report', 'tags': ['BID-REQ-001', 'BID-REQ-003', 'BID-REQ-005'], 'lineno': 29, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'starttime': '20240120 15:49:46.594', 'endtime': '20240120 15:49:47.026', 'elapsedtime': 432, 'status': 'FAIL', 'message': '1s', 'template': '', 'originalname': 'Verify That Home Page Contains Custom Element'}
+2024-01-20 15:49:47,268 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Close Browser
+2024-01-20 15:49:47,268 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Closes the current browser.', 'assign': [], 'tags': [], 'lineno': None, 'source': None, 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:47.026', 'endtime': '20240120 15:49:47.269', 'elapsedtime': 243, 'kwname': 'Close Browser', 'libname': 'SeleniumLibrary', 'args': []}
+2024-01-20 15:49:47,268 DEBUG RobotReporter end_keyword: End keyword: BuiltIn.Run Keyword
+2024-01-20 15:49:47,268 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Executes the given keyword with the given arguments.', 'assign': [], 'tags': [], 'lineno': 9, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'type': 'TEARDOWN', 'status': 'PASS', 'starttime': '20240120 15:49:47.026', 'endtime': '20240120 15:49:47.269', 'elapsedtime': 243, 'kwname': 'Run Keyword', 'libname': 'BuiltIn', 'args': ['Close Browser']}
+2024-01-20 15:49:47,269 DEBUG RobotReporter end_suite: End suite: Robocon
+2024-01-20 15:49:47,269 DEBUG RobotReporter end_suite: End suite: {'id': 's1-s1', 'longname': 'Robocon & Other Feature.Robocon', 'doc': 'This is an example test suite of Homepage Feature of Demo App', 'metadata': {}, 'starttime': '20240120 15:49:37.853', 'endtime': '20240120 15:49:47.269', 'elapsedtime': 9416, 'status': 'FAIL', 'message': '', 'tests': ['User Can See Home Page Screen Navigation Menu', 'Verify That Home Page Contains Custom Element'], 'suites': [], 'totaltests': 2, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot', 'statistics': '2 tests, 1 passed, 1 failed'}
+2024-01-20 15:49:47,270 DEBUG RobotReporter start_suite: Start suite: Other Feature
+2024-01-20 15:49:47,270 DEBUG RobotReporter start_suite: Start suite: {'id': 's1-s2', 'longname': 'Robocon & Other Feature.Other Feature', 'doc': 'This is an example test set for showing test report structure', 'metadata': {}, 'starttime': '20240120 15:49:47.270', 'tests': ['A Main Page Of Seznam Opens'], 'suites': [], 'totaltests': 1, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot'}
+2024-01-20 15:49:47,271 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Set Selenium Timeout
+2024-01-20 15:49:47,271 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Sets the timeout that is used by various keywords.', 'assign': [], 'tags': [], 'lineno': 16, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot', 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:47.271', 'endtime': '20240120 15:49:47.271', 'elapsedtime': 0, 'kwname': 'Set Selenium Timeout', 'libname': 'SeleniumLibrary', 'args': ['30 seconds']}
+2024-01-20 15:49:47,271 DEBUG RobotReporter end_keyword: End keyword: Init Test Settings
+2024-01-20 15:49:47,271 DEBUG RobotReporter end_keyword: End keyword: {'doc': '', 'assign': [], 'tags': [], 'lineno': None, 'source': None, 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:47.271', 'endtime': '20240120 15:49:47.271', 'elapsedtime': 0, 'kwname': 'Init Test Settings', 'libname': '', 'args': []}
+2024-01-20 15:49:56,242 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Open Browser
+2024-01-20 15:49:56,242 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Opens a new browser instance to the optional ``url``.', 'assign': [], 'tags': [], 'lineno': None, 'source': None, 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:47.272', 'endtime': '20240120 15:49:56.243', 'elapsedtime': 8971, 'kwname': 'Open Browser', 'libname': 'SeleniumLibrary', 'args': ['${URL}', 'Chrome']}
+2024-01-20 15:49:56,243 DEBUG RobotReporter end_keyword: End keyword: BuiltIn.Run Keywords
+2024-01-20 15:49:56,243 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Executes all the given keywords in a sequence.', 'assign': [], 'tags': [], 'lineno': 8, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot', 'type': 'SETUP', 'status': 'PASS', 'starttime': '20240120 15:49:47.271', 'endtime': '20240120 15:49:56.243', 'elapsedtime': 8972, 'kwname': 'Run Keywords', 'libname': 'BuiltIn', 'args': ['Init Test Settings', 'AND', 'Open Browser', '${URL}', 'Chrome']}
+2024-01-20 15:49:56,255 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Wait Until Page Contains Element
+2024-01-20 15:49:56,255 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Waits until the element ``locator`` appears on the current page.', 'assign': [], 'tags': [], 'lineno': 23, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot', 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:56.244', 'endtime': '20240120 15:49:56.256', 'elapsedtime': 12, 'kwname': 'Wait Until Page Contains Element', 'libname': 'SeleniumLibrary', 'args': ['//div[@class="content"]', '5s']}
+2024-01-20 15:49:56,256 DEBUG RobotReporter end_test: End test: A Main Page Of Seznam Opens
+2024-01-20 15:49:56,256 DEBUG RobotReporter end_test: End test: {'id': 's1-s2-t1', 'longname': 'Robocon & Other Feature.Other Feature.A Main Page Of Seznam Opens', 'doc': 'Open Seznam page and verify that the component is rendered', 'tags': ['BID-REQ-002'], 'lineno': 21, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot', 'starttime': '20240120 15:49:56.243', 'endtime': '20240120 15:49:56.256', 'elapsedtime': 13, 'status': 'PASS', 'message': '', 'template': '', 'originalname': 'A Main Page Of Seznam Opens'}
+2024-01-20 15:49:56,501 DEBUG RobotReporter end_keyword: End keyword: SeleniumLibrary.Close Browser
+2024-01-20 15:49:56,501 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Closes the current browser.', 'assign': [], 'tags': [], 'lineno': None, 'source': None, 'type': 'KEYWORD', 'status': 'PASS', 'starttime': '20240120 15:49:56.257', 'endtime': '20240120 15:49:56.502', 'elapsedtime': 245, 'kwname': 'Close Browser', 'libname': 'SeleniumLibrary', 'args': []}
+2024-01-20 15:49:56,501 DEBUG RobotReporter end_keyword: End keyword: BuiltIn.Run Keyword
+2024-01-20 15:49:56,501 DEBUG RobotReporter end_keyword: End keyword: {'doc': 'Executes the given keyword with the given arguments.', 'assign': [], 'tags': [], 'lineno': 9, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot', 'type': 'TEARDOWN', 'status': 'PASS', 'starttime': '20240120 15:49:56.256', 'endtime': '20240120 15:49:56.502', 'elapsedtime': 246, 'kwname': 'Run Keyword', 'libname': 'BuiltIn', 'args': ['Close Browser']}
+2024-01-20 15:49:56,502 DEBUG RobotReporter end_suite: End suite: Other Feature
+2024-01-20 15:49:56,502 DEBUG RobotReporter end_suite: End suite: {'id': 's1-s2', 'longname': 'Robocon & Other Feature.Other Feature', 'doc': 'This is an example test set for showing test report structure', 'metadata': {}, 'starttime': '20240120 15:49:47.270', 'endtime': '20240120 15:49:56.502', 'elapsedtime': 9232, 'status': 'PASS', 'message': '', 'tests': ['A Main Page Of Seznam Opens'], 'suites': [], 'totaltests': 1, 'source': '/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot', 'statistics': '1 test, 1 passed, 0 failed'}
+2024-01-20 15:49:56,502 DEBUG RobotReporter end_suite: End suite: Robocon & Other Feature
+2024-01-20 15:49:56,502 DEBUG RobotReporter end_suite: End suite: {'id': 's1', 'longname': 'Robocon & Other Feature', 'doc': '', 'metadata': {}, 'starttime': '20240120 15:49:37.842', 'endtime': '20240120 15:49:56.503', 'elapsedtime': 18661, 'status': 'FAIL', 'message': '', 'tests': [], 'suites': ['Robocon', 'Other Feature'], 'totaltests': 3, 'source': '', 'statistics': '3 tests, 2 passed, 1 failed'}
+2024-01-20 15:49:56,786 DEBUG RobotReporter close: Collected test results: {
+    "suites": [
+        {
+            "name": "Robocon & Other Feature.Robocon",
+            "documentation": "This is an example test suite of Homepage Feature of Demo App",
+            "status": "FAIL",
+            "start_time": "20240120 15:49:37.853",
+            "end_time": "20240120 15:49:47.269",
+            "elapsed_time": "0:00:09.416",
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "total": 2,
+            "source": "/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot",
+            "tests": [
+                {
+                    "name": "User Can See Home Page Screen Navigation Menu",
+                    "documentation": "Open Testing Page and verify that it contains all mandatory elements",
+                    "start_time": "20240120 15:49:46.474",
+                    "end_time": "20240120 15:49:46.594",
+                    "elapsed_time": "0:00:00.120",
+                    "status": "PASS",
+                    "message": "",
+                    "requirements": [
+                        "REQ-001",
+                        "REQ-003",
+                        "REQ-005"
+                    ],
+                    "tags": [
+                        "BID-REQ-001",
+                        "BID-REQ-003",
+                        "BID-REQ-005"
+                    ],
+                    "keywords": [],
+                    "keywords_statistics": {
+                        "total": 0,
+                        "passed": 0,
+                        "failed": 0,
+                        "skipped": 0
+                    }
+                },
+                {
+                    "name": "Verify That Home Page Contains Custom Element",
+                    "documentation": "Failing test case to demonstrate how it will look like in the report",
+                    "start_time": "20240120 15:49:46.594",
+                    "end_time": "20240120 15:49:47.026",
+                    "elapsed_time": "0:00:00.432",
+                    "status": "FAIL",
+                    "message": "1s",
+                    "requirements": [
+                        "REQ-001",
+                        "REQ-003",
+                        "REQ-005"
+                    ],
+                    "tags": [
+                        "BID-REQ-001",
+                        "BID-REQ-003",
+                        "BID-REQ-005"
+                    ],
+                    "keywords": [],
+                    "keywords_statistics": {
+                        "total": 0,
+                        "passed": 0,
+                        "failed": 0,
+                        "skipped": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Robocon & Other Feature.Other Feature",
+            "documentation": "This is an example test set for showing test report structure",
+            "status": "PASS",
+            "start_time": "20240120 15:49:47.270",
+            "end_time": "20240120 15:49:56.502",
+            "elapsed_time": "0:00:09.232",
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "total": 1,
+            "source": "/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot",
+            "tests": [
+                {
+                    "name": "A Main Page Of Seznam Opens",
+                    "documentation": "Open Seznam page and verify that the component is rendered",
+                    "start_time": "20240120 15:49:56.243",
+                    "end_time": "20240120 15:49:56.256",
+                    "elapsed_time": "0:00:00.013",
+                    "status": "PASS",
+                    "message": "",
+                    "requirements": [
+                        "REQ-002"
+                    ],
+                    "tags": [
+                        "BID-REQ-002"
+                    ],
+                    "keywords": [],
+                    "keywords_statistics": {
+                        "total": 0,
+                        "passed": 0,
+                        "failed": 0,
+                        "skipped": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "execution_name": "Robocon & Other Feature",
+        "execution_status": "FAIL",
+        "execution_start_time": "20240120 15:49:37.842",
+        "execution_end_time": "20240120 15:49:56.503",
+        "execution_elapsed_time": "0:00:18.661",
+        "total_passed": 2,
+        "total_failed": 1,
+        "total_skipped": 0,
+        "total_test_count": 3,
+        "overall_status": "3 tests, 2 passed, 1 failed",
+        "app_name": "RoboCon App",
+        "tester": "Jenkins Automation NPA",
+        "scope": "Description of the scope of the application release 1.0",
+        "release": "1.0"
+    }
+}
+2024-01-20 15:49:56,789 DEBUG RobotReporter close: Exporting test results to html...
+2024-01-20 15:49:56,789 DEBUG Exporter __export: Loading template robocontemplate.html.j2 from dir /Users/vaculova/Development/Robocon/Robocon 2024 talk
+2024-01-20 15:49:56,802 DEBUG RobotReporter __write_to_file: Writing generated output to file: /Users/vaculova/Development/Robocon/Robocon 2024 talk/20012024_154956_output.html

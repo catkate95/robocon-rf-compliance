@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style media="all" type="text/css">
+/* Generic and misc styles */
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: black;
+    padding: 6px;
+    background: white;
+    max-width: max-content;
+    margin: auto;
+}
+
+/* Generic table styles */
+table {
+    margin: 0 1px;
+    background: white;
+    table-layout: fixed;
+    word-wrap: break-word;
+    empty-cells: show;
+    font-size: 1em;
+}
+tr {
+    background: white;
+}
+th {
+    background: #ddd;
+    color: black;
+}
+th, td {
+    vertical-align: top;
+}
+/* Headers */
+#header {
+    width: 70em;
+    height: 3em;
+    margin: 6px 0;
+}
+h1 {
+    float: left;
+    margin: 0 0 0.5em 0;
+    width: 75%;
+}
+h2 {
+    clear: left;
+}
+#generated {
+    float: right;
+    text-align: right;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+/* Summary */
+.details {
+    border: 1px solid #ccc;
+    border-spacing: 0.2em;
+    clear: both;
+    width: 70em;
+    margin-bottom: 1em;
+}
+.details th {
+    background: white;
+    width: 11em;
+    text-align: left;
+    vertical-align: top;
+}
+.details td {
+    vertical-align: top;
+}
+
+/* Status text colors */
+.fail {
+    color: #ce3e01 !important;
+    font-weight: bold;
+}
+.pass {
+    color: #098a09 !important;
+}
+.skip {
+    color: #927201 !important;
+    font-weight: bold;
+}
+
+/* Statistics table */
+.statistics {
+    width: 70em;
+    border-collapse: collapse;
+    empty-cells: show;
+    margin-bottom: 1em;
+}
+
+.statistics tr:hover {
+    background: #f4f4f4;
+    cursor: pointer;
+}
+.statistics th, .statistics td {
+    border: 1px solid #ccc;
+    padding: 0.1em 0.3em;
+}
+.statistics th {
+    background-color: #ddd;
+    padding: 0.2em 0.3em;
+}
+.statistics td {
+    vertical-align: middle;
+}
+.stats-col-stat {
+    width: 4.5em;
+    text-align: center;
+}
+.stats-col-stat-req {
+    width: 7.5em;
+    text-align: center;
+}
+
+.stats-col-elapsed {
+    width: 5.5em;
+    text-align: center;
+}
+
+.stat-name {
+    float: left;
+}
+</style>
+</head>
+<body>
+<div id="header">
+    <h1> {{ metadata.execution_name }} </h1>
+    <div id="generated">
+    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.28 43.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #17202a;
+      }
+
+      .cls-2 {
+        fill: #bf72ff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="m2.73,43.4c-1.98,0-2.73-.99-2.73-2.79V.62C0,.25.25,0,.62,0h4.28c.37,0,.62.25.62.62v39.99c0,1.8-.74,2.79-2.79,2.79Zm16-23.56h-5.15l12.52,17.98c.68.87,1.43,1.92,1.43,2.98,0,1.55-1.3,2.6-2.85,2.6-1.12,0-1.8-.68-2.48-1.55l-13.08-18.72c-.19-.19-.25-.5-.25-.74v-7.44c0-.37.31-.68.68-.68h8.37c1.61,0,4.03-.06,4.03-2.29v-3.91c0-2.17-2.29-2.48-3.97-2.48h-8.43c-.37,0-.68-.31-.68-.68V.62c0-.37.31-.62.68-.62h9.18c4.4,0,8.8,3.1,8.8,8.06v3.91c0,5.21-4.34,7.87-8.8,7.87Z"/>
+      <path class="cls-1" d="m36.7.62v42.16c0,.37-.43.62-.68.62h-4.4c-.37,0-.62-.25-.62-.62V.62c0-.43.25-.62.62-.62h4.4c.25,0,.68.19.68.62Zm21.95,31.18c0,7.19-4.84,11.59-12.09,11.59h-5.95c-.37,0-.62-.25-.62-.62v-4.22c0-.43.25-.62.62-.62h5.95c4.15,0,6.39-1.98,6.39-6.14,0-4.65-1.12-7.25-6.39-7.25h-5.95c-.37,0-.62-.43-.62-.68v-4.4c0-.37.25-.62.62-.62h5.95c4.15,0,6.39-1.74,6.39-5.89,0-4.84-1.12-7.5-6.39-7.5h-5.95c-.37,0-.62-.19-.62-.68V.62c0-.43.25-.62.62-.62h5.95c8.37,0,12.09,5.02,12.09,12.96,0,3.04-.68,6.14-3.72,8.74,3.22,3.04,3.72,5.89,3.72,10.11Z"/>
+      <path class="cls-1" d="m62,19.28c.19-1.24.62-2.23,1.3-3.6l5.08-10.29c1.92-3.91,4.34-5.39,8.68-5.39h9.42c1.24,0,2.79.68,2.79,2.79,0,1.98-1.49,2.79-2.79,2.79h-9.3c-2.42,0-2.79.19-3.84,2.36l-4.84,9.67c-.31.62-.56,1.12-.74,1.61s-.68.81-1.18.81h-3.97c-.43,0-.74-.37-.62-.74Zm27.28,21.33c0,1.98-1.49,2.79-2.79,2.79h-9.73c-4.22,0-6.63-1.67-8.37-5.27l-5.15-10.35c-.56-1.24-1.05-2.42-1.24-3.66-.12-.37.19-.74.62-.74h3.91c.56,0,.99.31,1.24.81.19.5.43.99.74,1.55l4.71,9.61c1.12,2.29,1.67,2.48,4.15,2.48h9.11c1.24,0,2.79.68,2.79,2.79Z"/>
+      <path class="cls-1" d="m120.53,23.99v16.8c0,1.43-1.18,2.6-2.6,2.6h-3.84c-.56,0-.99-.31-1.24-.81l-14.2-32.61v-.06h-.12v9.42c0,.37-.25.68-.62.68h-4.28c-.37,0-.62-.31-.62-.68V2.6c0-1.43,1.12-2.6,2.6-2.6h3.84c.5,0,.99.31,1.18.81l14.26,33.04.06-9.86c0-.37.25-.68.62-.68h4.34c.31,0,.62.31.62.68Zm-22.01,0v16.55c0,1.8-.74,2.79-2.79,2.79s-2.73-.99-2.73-2.79v-16.55c0-.37.25-.68.62-.68h4.28c.37,0,.62.31.62.68Zm16.43-4.65l.06-16.49c0-1.8.74-2.79,2.73-2.79s2.79.99,2.79,2.79v16.49c0,.37-.31.68-.62.68h-4.34c-.37,0-.62-.31-.62-.68Z"/>
+      <path class="cls-2" d="m151.53,6.51v11.47c0,1.98-.12,3.53-1.67,4.96-1.43,1.24-2.73,1.61-4.59,1.61h-15.69v13.27h5.89c.37,0,.62.31.62.68v4.28c0,.37-.25.62-.62.62h-8.87c-1.43,0-2.6-1.18-2.6-2.6v-15.56c0-3.47,2.85-6.32,6.26-6.32h15.75V5.58h-5.89c-.37,0-.68-.31-.68-.62V.68c0-.37.31-.68.68-.68h5.15c1.86,0,3.16.25,4.59,1.55,1.55,1.49,1.67,2.98,1.67,4.96Zm-27.53-3.72c0-1.98,1.3-2.79,2.79-2.79h8.68c.37,0,.62.31.62.68v4.28c0,.31-.25.62-.62.62h-8.68c-1.49,0-2.79-.74-2.79-2.79Zm27.53,37.88c0,1.92-1.3,2.73-2.79,2.73h-8.62c-.37,0-.68-.25-.68-.62v-4.28c0-.37.31-.68.68-.68h8.62c1.49,0,2.79.81,2.79,2.85Z"/>
+      <path class="cls-2" d="m170.56,24.3v4.28c0,.37-.31.68-.62.68h-12.28c-1.49,0-2.67-1.18-2.67-2.67V2.79c0-1.36.68-2.79,2.85-2.79s2.73,1.43,2.73,2.79v20.83h9.36c.31,0,.62.37.62.68Zm11.72,2.17c0,1.98-1.36,2.79-2.79,2.79v11.35c0,1.8-.74,2.79-2.79,2.79s-2.73-.93-2.79-2.73V7.5c.06-1.43.74-2.73,2.79-2.73s2.79,1.43,2.79,2.79v16.06c1.43,0,2.79.81,2.79,2.85Z"/>
+    </g>
+  </g>
+</svg>
+    <br/>
+    <span>Generated<br>{{ metadata.execution_end_time }}</span><br>
+    </div>
+</div>
+<h2>Summary Information</h2>
+<table class="details">
+    <tbody>
+    <tr>
+    {%- if metadata.overall_status == "All tests passed" %}
+        {%- set status_class = "pass" %}
+    {%- else %}
+        {%- set status_class = "fail" %}
+    {%- endif %}
+        <th>Status:</th>
+        <td class="{{ status_class }}">{{ metadata.overall_status }}</td>
+    </tr>
+    <tr>
+        <th>Start Time:</th>
+        <td>{{ metadata.execution_start_time }}</td>
+    </tr>
+    <tr>
+        <th>End Time:</th>
+        <td>{{ metadata.execution_end_time }}</td>
+    </tr>
+    <tr>
+        <th>Elapsed Time:</th>
+        <td>{{ metadata.execution_elapsed_time }}</td>
+    </tr>
+    <tr>
+        <th>Application Name:</th>
+        <td>{{ metadata.app_name }}</td>
+    </tr>
+    <tr>
+        <th>Release:</th>
+        <td>{{ metadata.release }}</td>
+    </tr>
+    <tr>
+        <th>Tester:</th>
+        <td>{{ metadata.tester }}</td>
+    </tr>
+    <tr>
+        <th>Scope:</th>
+        <td>{{ metadata.scope }}</td>
+    </tr>
+    </tbody>
+</table>
+<h2>Suite Statistics</h2>
+<table class="statistics">
+    <thead>
+    <tr>
+        <th class="stats-col-name">Statistics by Suite</th>
+        <th class="stats-col-name">Documentation</th>
+        <th class="stats-col-stat">Status</th>
+        <th class="stats-col-stat">Total</th>
+        <th class="stats-col-stat">Pass</th>
+        <th class="stats-col-stat">Fail</th>
+        <th class="stats-col-stat">Skip</th>
+        <th class="stats-col-elapsed">Elapsed</th>
+    </tr>
+    </thead>
+    <tbody>
+    {%- for suite in suites %}
+    <tr>
+        <td class="stats-col-name">
+            <div class="stat-name">{{ suite.name.split('.') | last }}</div>
+        </td>
+        <td class="stats-col-name">{{ suite.documentation }}</td>
+        <td class="stats-col-stat {{ suite.status.lower() }}">{{ suite.status }}</td>
+        <td class="stats-col-stat">{{ suite.total }}</td>
+        <td class="stats-col-stat">{{ suite.passed }}</td>
+        <td class="stats-col-stat">{{ suite.failed }}</td>
+        <td class="stats-col-stat">{{ suite.skipped }}</td>
+        <td class="stats-col-elapsed">{{ suite.elapsed_time }}</td>
+    </tr>
+    {%- endfor %}
+    </tbody>
+</table>
+<h2>Test Statistics</h2>
+<table class="statistics">
+    <thead>
+    <tr>
+        <th class="stats-col-name">Suite</th>
+        <th class="stats-col-name">Test</th>
+        <th class="stats-col-stat">Status</th>
+        <th class="stats-col-stat-req">Requirements</th>
+        <th class="stats-col-elapsed">Elapsed</th>
+    </tr>
+    </thead>
+    <tbody>
+    {%- for suite in suites %}
+        {%- for test in suite.tests %}
+            <tr>
+                <td class="stats-col-name">{{ suite.name.split('.') | last }}</td>
+                <td class="stats-col-name">{{ test.name }}</td>
+                <td class="stats-col-stat {{ test.status.lower() }}">{{ test.status }}</td>
+                <td class="stats-col-stat-req">
+                {% for item in test.requirements %}
+                    {{ item }}<br/>
+                {% endfor %}</td>
+                <td class="stats-col-stat">{{ test.elapsed_time }}</td>
+            </tr>
+        {%- endfor %}
+    {%- endfor %}
+    </tbody>
+</table>
+</body>
+</html>

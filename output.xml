@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.9 on darwin)" generated="20240120 15:49:37.648" rpa="false" schemaversion="3">
+<suite id="s1" name="Robocon &amp; Other Feature">
+<suite id="s1-s1" name="Robocon" source="/Users/vaculova/Development/Robocon/Robocon 2024 talk/Robocon.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Init Test Settings</arg>
+<arg>AND</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Init Test Settings">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20240120 15:49:38.370" endtime="20240120 15:49:38.370"/>
+</kw>
+<status status="PASS" starttime="20240120 15:49:38.370" endtime="20240120 15:49:38.370"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240120 15:49:38.371" level="INFO">Opening browser 'Chrome' to base url 'https://www.seznam.cz/'.</msg>
+<status status="PASS" starttime="20240120 15:49:38.370" endtime="20240120 15:49:46.473"/>
+</kw>
+<status status="PASS" starttime="20240120 15:49:38.370" endtime="20240120 15:49:46.474"/>
+</kw>
+<test id="s1-s1-t1" name="User Can See Home Page Screen Navigation Menu" line="25">
+<kw name="Verify That Page Contains Subheading">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class="content"]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240120 15:49:46.474" endtime="20240120 15:49:46.593"/>
+</kw>
+<status status="PASS" starttime="20240120 15:49:46.474" endtime="20240120 15:49:46.594"/>
+</kw>
+<doc>Open Testing Page and verify that it contains all mandatory elements</doc>
+<tag>BID-REQ-001</tag>
+<tag>BID-REQ-003</tag>
+<tag>BID-REQ-005</tag>
+<status status="PASS" starttime="20240120 15:49:46.474" endtime="20240120 15:49:46.594"/>
+</test>
+<test id="s1-s1-t2" name="Verify That Home Page Contains Custom Element" line="29">
+<kw name="Verify That Custom Element Is Located On The Page">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//div[@class="i-am-not-there"]</arg>
+<arg>1s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240120 15:49:47.010" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-94.png"&gt;&lt;img src="selenium-screenshot-94.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240120 15:49:47.011" level="FAIL">1s</msg>
+<status status="FAIL" starttime="20240120 15:49:46.595" endtime="20240120 15:49:47.025"/>
+</kw>
+<status status="FAIL" starttime="20240120 15:49:46.595" endtime="20240120 15:49:47.025"/>
+</kw>
+<doc>Failing test case to demonstrate how it will look like in the report</doc>
+<tag>BID-REQ-001</tag>
+<tag>BID-REQ-003</tag>
+<tag>BID-REQ-005</tag>
+<status status="FAIL" starttime="20240120 15:49:46.594" endtime="20240120 15:49:47.026">1s</status>
+</test>
+<kw name="Run Keyword" library="BuiltIn" type="TEARDOWN">
+<arg>Close Browser</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240120 15:49:47.026" endtime="20240120 15:49:47.269"/>
+</kw>
+<status status="PASS" starttime="20240120 15:49:47.026" endtime="20240120 15:49:47.269"/>
+</kw>
+<doc>This is an example test suite of Homepage Feature of Demo App</doc>
+<status status="FAIL" starttime="20240120 15:49:37.853" endtime="20240120 15:49:47.269"/>
+</suite>
+<suite id="s1-s2" name="Other Feature" source="/Users/vaculova/Development/Robocon/Robocon 2024 talk/Other Feature.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Init Test Settings</arg>
+<arg>AND</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Init Test Settings">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20240120 15:49:47.271" endtime="20240120 15:49:47.271"/>
+</kw>
+<status status="PASS" starttime="20240120 15:49:47.271" endtime="20240120 15:49:47.271"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240120 15:49:47.272" level="INFO">Opening browser 'Chrome' to base url 'https://www.seznam.cz/'.</msg>
+<status status="PASS" starttime="20240120 15:49:47.272" endtime="20240120 15:49:56.243"/>
+</kw>
+<status status="PASS" starttime="20240120 15:49:47.271" endtime="20240120 15:49:56.243"/>
+</kw>
+<test id="s1-s2-t1" name="A Main Page Of Seznam Opens" line="21">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class="content"]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240120 15:49:56.244" endtime="20240120 15:49:56.256"/>
+</kw>
+<doc>Open Seznam page and verify that the component is rendered</doc>
+<tag>BID-REQ-002</tag>
+<status status="PASS" starttime="20240120 15:49:56.243" endtime="20240120 15:49:56.256"/>
+</test>
+<kw name="Run Keyword" library="BuiltIn" type="TEARDOWN">
+<arg>Close Browser</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240120 15:49:56.257" endtime="20240120 15:49:56.502"/>
+</kw>
+<status status="PASS" starttime="20240120 15:49:56.256" endtime="20240120 15:49:56.502"/>
+</kw>
+<doc>This is an example test set for showing test report structure</doc>
+<status status="PASS" starttime="20240120 15:49:47.270" endtime="20240120 15:49:56.502"/>
+</suite>
+<status status="FAIL" starttime="20240120 15:49:37.842" endtime="20240120 15:49:56.503"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">BID-REQ-001</stat>
+<stat pass="1" fail="0" skip="0">BID-REQ-002</stat>
+<stat pass="1" fail="1" skip="0">BID-REQ-003</stat>
+<stat pass="1" fail="1" skip="0">BID-REQ-005</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Robocon &amp; Other Feature">Robocon &amp; Other Feature</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="Robocon">Robocon &amp; Other Feature.Robocon</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Other Feature">Robocon &amp; Other Feature.Other Feature</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
